@@ -159,11 +159,18 @@ function PanelTasks({ tasks, setTasks, axios, useState, useEffect }) {
                 onChange={(e) => setMateria(e.target.value)}
               >
                 <option value="">Seleccione una materia</option>
-                <option value="Valores">Valores</option>
-                <option value="Modulo">Modulo</option>
-                <option value="Calculo Integral">Calculo Integral</option>
-                <option value="Ingles">Ingles</option>
-                <option value="Fisica II">Fisica II</option>
+                <option value="Matematicas Discretas">
+                  Matematicas Discretas
+                </option>
+                <option value="Fundamentos de Programacion">
+                  Fundamentos de Programacion
+                </option>
+                <option value="Taller de Administracion">
+                  Taller de Administracion
+                </option>
+                <option value="Calculo Diferencial">Calculo Diferencial</option>
+                <option value="Taller de Etica">Taller de Etica</option>
+                <option value="Tutoria">Tutoria</option>
               </select>
             </div>
 
@@ -187,12 +194,25 @@ function PanelTasks({ tasks, setTasks, axios, useState, useEffect }) {
                 value={teacher || ""}
                 onChange={(e) => setTeacher(e.target.value)}
               >
-                <option value="">Seleccione una materia</option>
-                <option value="Funes">Funes</option>
-                <option value="Efraín">Efraín</option>
-                <option value="Elizabeth">Elizabeth</option>
-                <option value="Yesenia">Yesenia</option>
-                <option value="Sánchez">Sánchez</option>
+                <option value="">Seleccione un profesor</option>
+                <option value="Ing. Galván Montelongo Araceli">
+                  Ing. Galván Montelongo Araceli
+                </option>
+                <option value="Ing. Rojas Cid Jesús Daniel">
+                  Ing. Rojas Cid Jesús Daniel
+                </option>
+                <option value="Ing. Morales Nava Renato">
+                  Ing. Morales Nava Renato
+                </option>
+                <option value="Ing. Hernández Heredia Salvador">
+                  Ing. Hernández Heredia Salvador
+                </option>
+                <option value="Ing. Nava Fombona Gabriel">
+                  Ing. Nava Fombona Gabriel
+                </option>
+                <option value="Ing. García Serna Jesús Rafael">
+                  Ing. García Serna Jesús Rafael
+                </option>
               </select>
             </div>
 
@@ -201,11 +221,22 @@ function PanelTasks({ tasks, setTasks, axios, useState, useEffect }) {
               <label htmlFor="importanceLevel">Nivel de importancia</label>
               <input
                 id="importanceLevel"
-                type="text"
                 value={importanceLevel}
                 onChange={(e) => setImportanceLevel(e.target.value)}
                 placeholder="Nivel de importancia"
               />
+
+              <select
+                id="importanceLevel"
+                value={importanceLevel}
+                onChange={(e) => setImportanceLevel(e.target.value)}
+              >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
             </div>
 
             {/* Tarea destacadas */}
@@ -281,7 +312,7 @@ function PanelTasks({ tasks, setTasks, axios, useState, useEffect }) {
                     <br />
                     <span>Maestro:</span> {task.teacher}
                     <br />
-                    <span>Fecha:</span> {task.date}
+                    <span>Fecha de entrega:</span> {task.date}
                     <br />
                     <span>Tarea destacada:</span> {task.isFixed ? "Sí" : "No"}
                     <br />
