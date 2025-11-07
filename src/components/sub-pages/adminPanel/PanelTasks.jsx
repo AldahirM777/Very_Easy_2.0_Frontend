@@ -176,7 +176,7 @@ function PanelTasks({ tasks, setTasks, axios, useState, useEffect }) {
 
             {/* Fecha */}
             <div className="son">
-              <label htmlFor="date">Fecha</label>
+              <label htmlFor="date">Fecha de entrega</label>
               <input
                 id="date"
                 type="text"
@@ -219,13 +219,6 @@ function PanelTasks({ tasks, setTasks, axios, useState, useEffect }) {
             {/* Nivel de importancia */}
             <div className="son">
               <label htmlFor="importanceLevel">Nivel de importancia</label>
-              <input
-                id="importanceLevel"
-                value={importanceLevel}
-                onChange={(e) => setImportanceLevel(e.target.value)}
-                placeholder="Nivel de importancia"
-              />
-
               <select
                 id="importanceLevel"
                 value={importanceLevel}
